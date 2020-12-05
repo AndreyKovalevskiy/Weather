@@ -37,6 +37,55 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		55087AFC257BBAAC002500EB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		55087AFD257BBAC8002500EB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				55DE65EB257A83BB00BAF400 /* LaunchScreen.storyboard */,
+				55DE65E6257A83B800BAF400 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		55087AFE257BBAD7002500EB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				55DE65E4257A83B800BAF400 /* WeatherViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		55087AFF257BBAE9002500EB /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				55DE65E0257A83B800BAF400 /* AppDelegate.swift */,
+				55DE65E2257A83B800BAF400 /* SceneDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		55087B00257BBB01002500EB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				55DE65E9257A83BB00BAF400 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		55087B01257BBB0B002500EB /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				55DE65EE257A83BB00BAF400 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
 		55DE65D4257A83B800BAF400 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +105,12 @@
 		55DE65DF257A83B800BAF400 /* Weather */ = {
 			isa = PBXGroup;
 			children = (
-				55DE65E0257A83B800BAF400 /* AppDelegate.swift */,
-				55DE65E2257A83B800BAF400 /* SceneDelegate.swift */,
-				55DE65E4257A83B800BAF400 /* WeatherViewController.swift */,
-				55DE65E6257A83B800BAF400 /* Main.storyboard */,
-				55DE65E9257A83BB00BAF400 /* Assets.xcassets */,
-				55DE65EB257A83BB00BAF400 /* LaunchScreen.storyboard */,
-				55DE65EE257A83BB00BAF400 /* Info.plist */,
+				55087AFF257BBAE9002500EB /* Application */,
+				55087AFC257BBAAC002500EB /* Model */,
+				55087AFD257BBAC8002500EB /* View */,
+				55087AFE257BBAD7002500EB /* Controller */,
+				55087B00257BBB01002500EB /* Resources */,
+				55087B01257BBB0B002500EB /* SupportingFiles */,
 			);
 			path = Weather;
 			sourceTree = "<group>";
@@ -288,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LHZHKM226;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,7 +357,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5LHZHKM226;
-				INFOPLIST_FILE = Weather/Info.plist;
+				INFOPLIST_FILE = Weather/SupportingFiles/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
