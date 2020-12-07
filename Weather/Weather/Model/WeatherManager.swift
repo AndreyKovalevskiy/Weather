@@ -8,7 +8,8 @@
 import Foundation
 
 struct WeatherManager {
-    let basicURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=d7f004f449f0de24c9f0e958ea662ea3&lang=ru"
+    let basicURL = "https://api.openweathermap.org/data/2.5/weather?&units=metric&appid=d7f004f449f0de24c9f0e958ea662ea3"
+    var delegate: WeatherManagerDelegate?
     
     func fetchWeather(city: String) {
         let urlString = basicURL + "&q=\(city)"
@@ -21,13 +22,15 @@ struct WeatherManager {
             let session = URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, response, error) in
                 if error != nil {
+                    delegate?.didFailWithError(self, error: error!)
                     return
                 }
                 if let data = data {
                     if let weatherModel = parseJSON(data: data) {
-                        print("\(weatherModel.cityName) \(weatherModel.temperatureString)")
-                    } else {
-                        print("Parsing error")
+                        DispatchQueue.main.async {
+                            delegate?.didUpdateWeather(self, weatherModel: weatherModel)
+                        }
+                        
                     }
                 }
             }

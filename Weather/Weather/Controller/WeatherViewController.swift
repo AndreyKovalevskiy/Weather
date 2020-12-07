@@ -14,13 +14,13 @@ class WeatherViewController: UIViewController {
     @IBOutlet weak var cityLabel: UILabel!
     @IBOutlet weak var searchTextField: UITextField!
     
-    let weatherManager = WeatherManager()
+    var weatherManager = WeatherManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         searchTextField.delegate = self
-        
+        weatherManager.delegate = self
     }
     
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -51,4 +51,17 @@ extension WeatherViewController: UITextFieldDelegate {
         }
         searchTextField.text = ""
     }
+}
+
+extension WeatherViewController: WeatherManagerDelegate {
+    func didUpdateWeather(_ weatherManager: WeatherManager, weatherModel: WeatherModel) {
+        conditionImageView.image = UIImage(systemName: weatherModel.conditionString)
+        cityLabel.text = weatherModel.cityName
+        temperatureLabel.text = weatherModel.temperatureString
+    }
+    
+    func didFailWithError(_ weatherManager: WeatherManager, error: Error) {
+        print(error)
+    }
+    
 }
