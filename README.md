@@ -2,6 +2,10 @@
 
 Weather is a beautiful, dark-mode enable app to check the weather for the current location based on the GPS data from the iPhone as well as by searching for a city manually.
 
+## Screenshots
+
+![Light Dark Mode](Documentation/Images/LightDarkMode.png)
+
 ## Requirements
 
 - macOS 11.0.1 or later
