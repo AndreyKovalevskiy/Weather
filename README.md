@@ -5,7 +5,7 @@ Weather is a beautiful, dark-mode enable app to check the weather for the curren
 ## Requirements
 
 - macOS 11.0.1 or later
-- Xcode 12.2 or later
+- Xcode 12.0 or later
 - iOS 14.0 or later. iPad devices are not supported
 
 #### How to set up the environment
